@@ -1,0 +1,15 @@
+Update latest verison on node
+		https://github.com/sdesalas/node-pi-zero
+		wget -O - https://raw.githubusercontent.com/sdesalas/node-pi-zero/master/install-node-v8.8.1.sh | bash
+
+Install xterm
+	sudo apt-get install xterm
+	mkdir -p ~/.config/autostart
+	sudo nano ~/.config/autostart/lxterm-autostart.desktop
+
+Add this:
+[Desktop Entry]
+Encoding=UTF-8
+Name=Terminal autostart
+Comment=Start a terminal and list directory
+Exec=/usr/bin/lxterm -hold -e '/usr/bin/node ~/Downloads/showshow/index.js'
